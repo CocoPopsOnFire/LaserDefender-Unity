@@ -1,13 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.8
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaserDefender", "LaserDefender.csproj", "{3CEDF8EF-ED03-E8F6-454B-B11117C2BA8A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaserDefender", "LaserDefender.csproj", "{3CEDF8EF-ED03-E8F6-454B-B11117C2BA8A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaserDefender.Editor", "LaserDefender.Editor.csproj", "{8796DFE8-ACF1-AF48-3E36-2E1357C3EF4D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaserDefender.Editor", "LaserDefender.Editor.csproj", "{8796DFE8-ACF1-AF48-3E36-2E1357C3EF4D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaserDefender.Editor", "LaserDefender.Editor.csproj", "{8796DFE8-ACF1-AF48-3E36-2E1357C3EF4D}"
 EndProject
@@ -21,18 +17,6 @@ Global
 		{3CEDF8EF-ED03-E8F6-454B-B11117C2BA8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CEDF8EF-ED03-E8F6-454B-B11117C2BA8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CEDF8EF-ED03-E8F6-454B-B11117C2BA8A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3CEDF8EF-ED03-E8F6-454B-B11117C2BA8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3CEDF8EF-ED03-E8F6-454B-B11117C2BA8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3CEDF8EF-ED03-E8F6-454B-B11117C2BA8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3CEDF8EF-ED03-E8F6-454B-B11117C2BA8A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8796DFE8-ACF1-AF48-3E36-2E1357C3EF4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8796DFE8-ACF1-AF48-3E36-2E1357C3EF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8796DFE8-ACF1-AF48-3E36-2E1357C3EF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8796DFE8-ACF1-AF48-3E36-2E1357C3EF4D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8796DFE8-ACF1-AF48-3E36-2E1357C3EF4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8796DFE8-ACF1-AF48-3E36-2E1357C3EF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8796DFE8-ACF1-AF48-3E36-2E1357C3EF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8796DFE8-ACF1-AF48-3E36-2E1357C3EF4D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8796DFE8-ACF1-AF48-3E36-2E1357C3EF4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8796DFE8-ACF1-AF48-3E36-2E1357C3EF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8796DFE8-ACF1-AF48-3E36-2E1357C3EF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -40,5 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1A7F173D-0E1C-4B8E-A299-56A8DD63A3A6}
 	EndGlobalSection
 EndGlobal

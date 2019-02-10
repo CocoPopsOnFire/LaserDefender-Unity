@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4712777691516414}
   - component: {fileID: 212402335842275922}
+  - component: {fileID: 114781390187051860}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -40,6 +41,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114781390187051860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1662028948515402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd3a3884c8488a4ebb5e6af46979fa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 4778907448180102, guid: ce876b3a269d2104c89d9001cf991afe, type: 2}
+  - {fileID: 4391862352558390, guid: ce876b3a269d2104c89d9001cf991afe, type: 2}
+  - {fileID: 4408984710089338, guid: ce876b3a269d2104c89d9001cf991afe, type: 2}
+  - {fileID: 4518887983704054, guid: ce876b3a269d2104c89d9001cf991afe, type: 2}
+  - {fileID: 4884830803128150, guid: ce876b3a269d2104c89d9001cf991afe, type: 2}
+  - {fileID: 4717221708034890, guid: ce876b3a269d2104c89d9001cf991afe, type: 2}
+  - {fileID: 4821279289327574, guid: ce876b3a269d2104c89d9001cf991afe, type: 2}
+  moveSpeed: 2
 --- !u!212 &212402335842275922
 SpriteRenderer:
   m_ObjectHideFlags: 1
