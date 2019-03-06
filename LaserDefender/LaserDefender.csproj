@@ -301,8 +301,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\EnemyPathing.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\Shredder.cs" />
+    <Compile Include="Assets\Scripts\WaveConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Other Assests\Spritesheet\sheet.xml" />
