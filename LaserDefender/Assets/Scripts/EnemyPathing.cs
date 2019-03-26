@@ -10,7 +10,6 @@ public class EnemyPathing : MonoBehaviour {
 
     //static params
     int waypointIndex = 0;
-    List<Transform> waypoints;
 
 
 	//unity methods

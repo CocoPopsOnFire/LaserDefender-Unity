@@ -11,12 +11,14 @@ public class Enemy : MonoBehaviour {
 	[SerializeField] float maxTimeBetweenShots=1.9f;
 	[SerializeField] GameObject laserPrefab;
 	[SerializeField] float laserSpeed=10f;
+	[SerializeField] GameObject deathVFX;
+	[SerializeField] float durationOfVFX = 1f;
 
 	// Use this for initialization
 	void Start () {
 		shotCounter=UnityEngine.Random.Range(minTimeBetweenShots,maxTimeBetweenShots);
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		CountDownAndShoot();
@@ -35,6 +37,7 @@ public class Enemy : MonoBehaviour {
 		health -= damageDealer.GetDamage();
 		damageDealer.Hit();
 		if(health<=0){
+			Die();
 			Destroy(gameObject);
 		}
 	}
@@ -51,5 +54,11 @@ public class Enemy : MonoBehaviour {
 	{
 		GameObject laser = Instantiate(laserPrefab, transform.position, Quaternion.identity) as GameObject;
         laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -laserSpeed);
+	}
+
+	private void Die(){
+			Destroy(gameObject);
+			GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
+			Destroy(explosion, durationOfVFX);
 	}
 }
