@@ -13,6 +13,10 @@ public class Enemy : MonoBehaviour {
 	[SerializeField] float laserSpeed=10f;
 	[SerializeField] GameObject deathVFX;
 	[SerializeField] float durationOfVFX = 1f;
+	[SerializeField] AudioClip deathSFX;
+	[SerializeField] [Range(0,1)] float deathSFXVolume=0.5f;
+    [SerializeField] AudioClip shootSound;
+    [SerializeField] [Range(0,1)] float shootSoundVolume=0.3f;
 
 	// Use this for initialization
 	void Start () {
@@ -38,7 +42,6 @@ public class Enemy : MonoBehaviour {
 		damageDealer.Hit();
 		if(health<=0){
 			Die();
-			Destroy(gameObject);
 		}
 	}
 
@@ -54,11 +57,13 @@ public class Enemy : MonoBehaviour {
 	{
 		GameObject laser = Instantiate(laserPrefab, transform.position, Quaternion.identity) as GameObject;
         laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -laserSpeed);
+		AudioSource.PlayClipAtPoint(shootSound, Camera.main.transform.position, shootSoundVolume);
 	}
 
 	private void Die(){
 			Destroy(gameObject);
 			GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
 			Destroy(explosion, durationOfVFX);
+			AudioSource.PlayClipAtPoint(deathSFX,Camera.main.transform.position,deathSFXVolume);
 	}
 }

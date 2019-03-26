@@ -77,7 +77,11 @@ MonoBehaviour:
     type: 2}
   laserSpeed: 10
   deathVFX: {fileID: 1231574498240020, guid: 293cd729c3dd47a4d9666c1a79bfa6e9, type: 2}
-  durationOfVFX: 1
+  durationOfVFX: 3
+  deathSFX: {fileID: 8300000, guid: 9d2ee1e241a5cf04aa7d1066e6cc3508, type: 3}
+  deathSFXVolume: 0.5
+  shootSound: {fileID: 8300000, guid: cc06cd538d6e970478a28a17b9cb9d75, type: 3}
+  shootSoundVolume: 0.1
 --- !u!114 &114781390187051860
 MonoBehaviour:
   m_ObjectHideFlags: 1
