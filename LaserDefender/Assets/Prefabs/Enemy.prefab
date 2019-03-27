@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 114781390187051860}
   - component: {fileID: 114645599973562720}
   - component: {fileID: 58117812068506598}
+  - component: {fileID: 50882068050429390}
+  - component: {fileID: 114873800142431144}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -43,6 +45,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50882068050429390
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1662028948515402}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &58117812068506598
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -52,7 +74,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.02584362}
@@ -69,17 +91,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76445eefd075ad849a00dfe3c3aae2c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  shotCounter: 0
+  health: 200
+  deathVFX: {fileID: 1231574498240020, guid: 293cd729c3dd47a4d9666c1a79bfa6e9, type: 2}
+  durationOfVFX: 3
+  deathSFX: {fileID: 8300000, guid: 9d2ee1e241a5cf04aa7d1066e6cc3508, type: 3}
+  deathSFXVolume: 0.5
+  score: 13
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 1.9
   laserPrefab: {fileID: 1078636053394984, guid: 53434f2f66431b349803fb67494de518,
     type: 2}
   laserSpeed: 10
-  deathVFX: {fileID: 1231574498240020, guid: 293cd729c3dd47a4d9666c1a79bfa6e9, type: 2}
-  durationOfVFX: 3
-  deathSFX: {fileID: 8300000, guid: 9d2ee1e241a5cf04aa7d1066e6cc3508, type: 3}
-  deathSFXVolume: 0.5
   shootSound: {fileID: 8300000, guid: cc06cd538d6e970478a28a17b9cb9d75, type: 3}
   shootSoundVolume: 0.1
 --- !u!114 &114781390187051860
@@ -93,6 +115,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd3a3884c8488a4ebb5e6af46979fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114873800142431144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1662028948515402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f46e0f529352be24aa076208d5586282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 300
 --- !u!212 &212402335842275922
 SpriteRenderer:
   m_ObjectHideFlags: 1

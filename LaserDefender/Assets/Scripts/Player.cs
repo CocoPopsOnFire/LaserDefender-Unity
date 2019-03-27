@@ -38,6 +38,10 @@ public class Player : MonoBehaviour {
         Fire();
 	}
 
+    public float GetHealth(){
+        return health;
+    }
+
     void OnTriggerEnter2D(Collider2D other)
 	{
 		DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
@@ -52,12 +56,13 @@ public class Player : MonoBehaviour {
         damageDealer.Hit();
 		if(health<=0){
 			Die();
-            AudioSource.PlayClipAtPoint(deathSFX,Camera.main.transform.position,deathSFXVolume);
 		}
 	}
 
     private void Die(){
+        AudioSource.PlayClipAtPoint(deathSFX,Camera.main.transform.position,deathSFXVolume);
         Destroy(gameObject);
+        FindObjectOfType<Level>().LoadGameOver();
     }
 
     //custom methods
